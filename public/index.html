@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CBR Reader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside id="sidebar">
+    <h1>📚 Biblioteca</h1>
+    <label class="btn primary">
+      + Añadir CBR / CBZ
+      <input id="file" type="file" multiple accept=".cbr,.cbz,.rar,.zip" hidden>
+    </label>
+    <div id="status"></div>
+    <ul id="list"></ul>
+  </aside>
+
+  <main>
+    <header id="toolbar">
+      <button id="toggleSide" title="Mostrar/ocultar biblioteca">☰</button>
+      <span id="title">Sin cómic abierto</span>
+      <span class="spacer"></span>
+
+      <button id="prev" title="Anterior (←)">◀</button>
+      <input id="pageInput" type="number" min="1" value="1">
+      <span id="total">/ 0</span>
+      <button id="next" title="Siguiente (→)">▶</button>
+
+      <select id="mode" title="Modo de lectura">
+        <option value="single">Página simple</option>
+        <option value="double">Doble página</option>
+        <option value="scroll">Scroll continuo</option>
+      </select>
+      <select id="fit" title="Ajuste">
+        <option value="width">Ajustar al ancho</option>
+        <option value="height">Ajustar al alto</option>
+      </select>
+      <button id="zoomOut" title="Alejar (-)">−</button>
+      <span id="zoomLabel">100%</span>
+      <button id="zoomIn" title="Acercar (+)">+</button>
+      <label class="check" title="Lectura de derecha a izquierda (manga)">
+        <input id="rtl" type="checkbox"> Manga
+      </label>
+      <button id="fullscreen" title="Pantalla completa (F)">⛶</button>
+    </header>
+
+    <div id="viewer"></div>
+  </main>
+
+  <div id="drop">Suelta aquí tus archivos .cbr / .cbz</div>
+  <script src="app.js"></script>
+</body>
+</html>
