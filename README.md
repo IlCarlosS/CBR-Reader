@@ -35,7 +35,7 @@ Al ejecutarlo se crean automáticamente dos carpetas:
 ## Instalación y uso
 
 ```bash
-git clone https://github.com/TU_USUARIO/cbr-reader.git
+git clone
 cd cbr-reader
 npm install
 npm start
